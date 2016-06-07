@@ -1,83 +1,432 @@
 <!doctype html>
-<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
-<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
 <html>
-<head>
+  <head>
+  
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+  
+  <title>Kris Temmerman</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+  
+  <style type="text/css">
+  @import url(
+  https://fonts.googleapis.com/css?family=Lato:400,700
+);
+body {
+  background: #fff;
+  font-family: Lato, sans-serif;
+  margin: 0 0 80px;
+}
+a {
+  color: #2ecc71;
+}
+a:focus,
+a:hover {
+  color: #f1c40f;
+  text-decoration: none;
+}
+p {
+  line-height: 1.5;
+  margin: 0;
+}
+p + p {
+  margin-top: 10px;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0
+}
+section {
+  margin-top: 30px;
+}
+li {
+  line-height: 1.8;
+  list-style: none;
+}
+li:before {
+  content: "\f052";
+  float: left;
+  font: 13px Octicons;
+  margin-top: 6px;
+  margin-left: -20px;
+  opacity: .1;
+  position: absolute;
+}
+blockquote {
+  border-left: 5px solid #e7e9ec;
+  font-size: 14px;
+}
+em {
+  color: #95a5a6;
+  font-weight: normal;
+  font-style: normal;
+}
+h4 span:first-child {
+  color: #000;
+  font-weight: bold;
+}
+.container {
+  max-width: 750px;
+  padding: 0 30px;
+}
+.col-sm-6 {
+  margin-bottom: 10px;
+}
+.col-sm-12 h4 {
+  margin-top: 12px; 
+}
+.col-sm-12 + .col-sm-12 {
+  margin-top: 30px;
+}
+#header {
+  background: #f4f6f6;
+  padding: 50px 0;
+  margin-bottom: 30px;
+}
+#header h2 {
+  color: #95a5a6;
+  font-size: 24px;
+}
+#content h3 {
+  color: #f1c40f;
+  font-size: 26px;
+  margin-top: -4px;
+}
+#content aside {
+  text-align: right;
+  padding-right: 30px;
+}
+#profiles .network {
+  text-transform: capitalize;
+}
+#work .position,
+#volunteer .position {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+#education .area {
+  font-weight: bold;
+}
+#education .area:before {
+  content: "\f0d7";
+  font: 16px Octicons;
+  margin-right: 6px;
+}
+#education .studyType {
+  margin-left: 25px;
+}
+#awards .summary,
+#publications .summary {
+  margin-top: 8px;
+}
+#publications .website a:before {
+  content: attr(href);
+}
 
-  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
-  <link rel="stylesheet" href="stylesheets/github-dark.css">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/script.js"></script>
+@media (min-width: 480px) {
+  .strike-through {
+    border-top: 1px solid #f4f6f6;
+    height: 20px;
+    margin-top: 12px;
+    margin-bottom: -2px;
+    position: relative;
+  }
+  .strike-through span,
+  .strike-through a {
+    background: #fff;
+    position: absolute;
+  }
+  .strike-through span:first-child {
+    padding-right: 20px;
+    margin-top: -12px;
+  }
+  .strike-through span + span {
+    font-size: 14px;
+    margin-top: -10px;
+    padding-left: 20px;
+    right: 0;
+  }
+}
+@media (max-width: 768px) {
+  .col-sm-6:last-child {
+    margin-bottom: 0px;
+  }
+  #content aside {
+    margin-bottom: 20px;
+    padding-right: 0;
+    text-align: left;
+  }
+  #publications .website a:before {
+    content: "View publication";
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 26px;
+  }
+  .date {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .strike-through span:first-child {
+    margin-bottom: 7px;
+  }
+  .strike-through span {
+    display: block;
+  } 
+  #header {
+    margin-bottom: 10px;
+    padding: 40px 0;
+  }
+  #actions {
+    display: none;
+  }
+}
 
-  <title>Cv</title>
-  <meta name="description" content="Curriculum Vitae">
-
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
-</head>
-
-<body>
-
-  <div class="wrapper">
-    <header>
-      <h1 class="title">Cv</h1>
-    </header>
-    <div id="container">
-      <p class="tagline">Curriculum Vitae</p>
-      <div id="main" role="main">
-        <div class="download-bar">
-        <div class="inner">
-          <a href="https://github.com/KrisTemmerman/cv/tarball/master" class="download-button tar"><span>Download</span></a>
-          <a href="https://github.com/KrisTemmerman/cv/zipball/master" class="download-button zip"><span>Download</span></a>
-          <a href="https://github.com/KrisTemmerman/cv" class="code">View Cv on GitHub</a>
+  </style>
+  
+  </head>
+  <body>
+  
+  <header id="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9 col-sm-push-3">
+          <h1>
+            Kris Temmerman
+          </h1>
+          <h2>
+            front-end architect
+          </h2>
         </div>
-        <span class="blc"></span><span class="trc"></span>
-        </div>
-        <article class="markdown-body">
-          <p>`<code>### Welcome to GitHub Pages.
-This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here [using GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/), select a template crafted by a designer, and publish. After your page is generated, you can check out the new</code>gh-pages` branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
-
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
-
-<h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/#mentioning-users-and-teams" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
-        </article>
       </div>
     </div>
-    <footer>
-      <div class="owner">
-      <p><a href="https://github.com/KrisTemmerman" class="avatar"><img src="https://avatars0.githubusercontent.com/u/223641?v=3&amp;s=60" width="48" height="48"></a> <a href="https://github.com/KrisTemmerman">KrisTemmerman</a> maintains <a href="https://github.com/KrisTemmerman/cv">Cv</a></p>
+  </header>
+  <div id="content" class="container">
 
+  <section id="contact" class="row">
+    <aside class="col-sm-3">
+      <h3>Contact</h3>
+    </aside>
+    <div class="col-sm-9">
+      <div class="row">
+      <div class="col-sm-6">
+        <strong>Email</strong>
+        <div class="email"><a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="bbd0c995cfded6d6dec9d6dad5fbdcd6dad2d795d8d4d6">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></div>
+      </div>
+      <div class="col-sm-6">
+        <strong>Phone</strong>
+        <div class="phone">0474761213</div>
+      </div>
+      <div class="col-sm-6">
+        <strong>Website</strong>
+        <div class="website">
+          <a href="http://kristemmerman.github.io">http://kristemmerman.github.io</a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="row">
+    <aside class="col-sm-3">
+      <h3>About</h3>
+    </aside>
+    <div class="col-sm-9">
+      <p>Ik ben Kris, mijn passie is front end. Werkt graag met cutting edge technologieën</p>
+    </div>
+  </section>
+  <section id="profiles" class="row">
+    <aside class="col-sm-3">
+      <h3>Profiles</h3>
+    </aside>
+    <div class="col-sm-9">
+      <div class="row">
+        <div class="col-sm-6">
+          <strong class="network">
+            Twitter
+          </strong>
+          <div class="username">
+            <div class="url">
+              <a href="twitter.com/kristemmerman">@kristemmerman</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section id="work" class="row">
+    <aside class="col-sm-3">
+      <h3>Work</h3>
+    </aside>
+    <div class="col-sm-9">
+      <div class="row">
+      <div class="col-sm-12">
+        <h4 class="strike-through">
+          <span>White Label (Genk/Brussel)</span>
+          <span class="date">
+            10/2015 — 05/2016
+          </span>
+        </h4>
+        <div class="website pull-right">
+          <a href="http://whitelabel.agency">http://whitelabel.agency</a>
+        </div>
+        <div class="position">
+          Front end architect
+        </div>
+        <div class="summary">
+          <p></p>
+        </div>
+        <h4>Highlights</h4>
+        <ul class="highlights">
+          <li class="bullet">Ontwikkelen van widget library voor ACV (Zaventem)</li>
+          <li class="bullet">Opgebouwd met AngularJS,Gulp,Bower</li>
+          <li class="bullet">Ontwikkelen van een uitgebreid webframework</li>
+        </ul>
       </div>
-      <div class="creds">
-        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+      <div class="col-sm-12">
+        <h4 class="strike-through">
+          <span>Artoos (Kampenhout)</span>
+          <span class="date">
+            05/2014 — 06/2015
+          </span>
+        </h4>
+        <div class="website pull-right">
+          <a href="www.artoos.be">www.artoos.be</a>
+        </div>
+        <div class="position">
+          front-end developer
+        </div>
+        <div class="summary">
+          <p></p>
+        </div>
+        <h4>Highlights</h4>
+        <ul class="highlights">
+          <li class="bullet">Front-end &amp; e-mail campaign development</li>
+          <li class="bullet">Wordpress template development</li>
+          <li class="bullet">Responsive web/e-mail development</li>
+          <li class="bullet">Opleiding geven aan klanten</li>
+          <li class="bullet"></li>
+        </ul>
       </div>
-    </footer>
-  </div>
-  <div class="current-section">
-    <a href="#top">Scroll to top</a>
-    <a href="https://github.com/KrisTemmerman/cv/tarball/master" class="tar">tar</a><a href="https://github.com/KrisTemmerman/cv/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
-    <p class="name"></p>
-  </div>
+      </div>
+    </div>
+  </section>
 
   
-</body>
+  <section id="education" class="row">
+    <aside class="col-sm-3">
+      <h3>Education</h3>
+    </aside>
+    <div class="col-sm-9">
+      <div class="row">
+      <div class="col-sm-12">
+        <h4 class="strike-through">
+          <span>KULeuven</span>
+          <span class="date">
+            2009 — 2013
+          </span>
+        </h4>
+        <div class="area">
+          Handelsingenieur in de Beleidsinformatica
+        </div>
+        <div class="studyType">
+          Studie onderbroken wegens werkopportuniteit
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <h4 class="strike-through">
+          <span>Koninklijk Technisch Atheneum</span>
+          <span class="date">
+            2006 — 2009
+          </span>
+        </h4>
+        <div class="area">
+          Hasselt
+        </div>
+        <div class="studyType">
+          Informatica beheer
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  <section id="skills" class="row">
+    <aside class="col-sm-3">
+      <h3>Skills</h3>
+    </aside>
+    <div class="col-sm-9">
+      <div class="row">
+      <div class="col-sm-6">
+        <div class="name">
+          <h4>Front end</h4>
+        </div>
+        <ul class="keywords">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Javascript</li>
+          <li>AngularJS</li>
+          <li>Gulp</li>
+          <li>JQuery</li>
+        </ul>
+      </div>
+      <div class="col-sm-6">
+        <div class="name">
+          <h4>Backend Development</h4>
+        </div>
+        <ul class="keywords">
+          <li>Simple REST API with Laravel5 </li>
+          <li></li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="languages" class="row">
+    <aside class="col-sm-3">
+      <h3>Languages</h3>
+    </aside>
+    <div class="col-sm-9">
+      <div class="row">
+      <div class="col-sm-6">
+        <div class="language">
+          <strong>English</strong>
+        </div>
+        <div class="fluency">
+          Zeer goed lezen en schrijven
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="language">
+          <strong>Nederlands</strong>
+        </div>
+        <div class="fluency">
+          Moedertaal
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="language">
+          <strong>Frans</strong>
+        </div>
+        <div class="fluency">
+          Ik kan mezelf goed behelpen.
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  </div>
+ 
+  </body>
 </html>
